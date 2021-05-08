@@ -137,6 +137,8 @@ def aStarSearch(problem):
     while (not OPEN.isEmpty()):
         n,n_actions,n_g=OPEN.pop() # open.append(n)
         if (problem.isGoalState(n)): # if target node return
+            print('Action is ',n_actions)
+            #print('CLOSED list is ',CLOSED)
             return n_actions
         CLOSED.append(n)
         for m, m_actions, m_g in problem.getSuccessors(n):
